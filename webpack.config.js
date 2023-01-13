@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/components/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -21,11 +21,12 @@ module.exports = {
             presets: ['@babel/preset-react', "@babel/preset-env"]
           }
         }
-      }, {
-        test: /\.s[ac]ss$/i,
-        use : [ 'style-loader', 'css-loader', 'sass-loader']
-      },
-    ]
+      }, 
+                  {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            }
+  ],
   },
   externals: {
     'react': 'commonjs react'

@@ -16,9 +16,9 @@ const getTrackConfig = ({ error, source, target, disabled }) => {
       borderRight: '1px solid rgba(214,0,11,0.5)',
     }
     : {
-      backgroundColor: 'rgba(98, 203, 102, 0.5)',
-      borderLeft: '1px solid #62CB66',
-      borderRight: '1px solid #62CB66',
+      backgroundColor: 'rgba(234, 236, 237)',
+      borderLeft: '1px solid rgba(234, 236, 237)',
+      borderRight: '1px solid rgba(234, 236, 237)',
     }
 
   return { ...basicStyle, ...coloredTrackStyle }
